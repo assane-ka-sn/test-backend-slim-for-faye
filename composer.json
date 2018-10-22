@@ -1,0 +1,19 @@
+{
+    "name": "backend-issafrique",
+    "authors": [
+        {
+            "name": "Assane KA",
+            "email": "kasanesn@hotmail.com"
+        }
+    ],
+    
+    "autoload":{
+        "psr-4":{
+            "App\\":"app/"
+        }
+    },
+    
+    "require": {
+        "slim/slim": "^3.7"
+    }
+}
