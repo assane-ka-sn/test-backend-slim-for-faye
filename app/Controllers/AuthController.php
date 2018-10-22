@@ -17,6 +17,7 @@ class AuthController extends Controller {
 
         $data = $request->getParsedBody();
         $params = json_decode($data['params']);
+
         $userModel = new AuthModel($this->db);
         $reponse = $userModel->login($params->login, $params->pwd);
         return $response->withJson($reponse);

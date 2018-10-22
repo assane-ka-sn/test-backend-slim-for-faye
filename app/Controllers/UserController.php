@@ -15,8 +15,10 @@ class UserController extends Controller {
 
     public function addmembre(Request $request, Response $response, $args){
         header("Access-Control-Allow-Origin: *");
+
         $data = $request->getParsedBody();
         $params = json_decode($data['params']);
+
         $authModel = new AuthModel($this->db);
         $auth = $authModel->isUser($params->token);
         if($auth){

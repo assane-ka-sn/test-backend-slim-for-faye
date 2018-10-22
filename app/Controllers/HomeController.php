@@ -13,7 +13,6 @@ use \App\Models\UserModel;
 class HomeController extends Controller {
 
   	public function accueil(Request $request, Response $response, $args){
-        $this->_logger->addInfo("Fist Use");
         return $response->withJson(array("message", "WELCOME"));
     }
     

@@ -18,6 +18,7 @@ class ChatController extends Controller {
 
         $data = $request->getParsedBody();
         $params = json_decode($data['params']);
+
         $authModel = new AuthModel($this->db);
         $auth = $authModel->isUser($params->token);
         if($auth){

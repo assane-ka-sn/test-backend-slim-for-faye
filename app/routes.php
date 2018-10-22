@@ -14,6 +14,7 @@ $app->group('/auth', function () {
 
 $app->group('/chat', function () {
 
+    $this->get('/listeusers', App\Controllers\ChatController::class .':listAllUsers');
     $this->post('/listeusers', App\Controllers\ChatController::class .':listAllUsers');
 
     $this->post('/listedatainitadmin', App\Controllers\ChatController::class .':listedatainitadmin');
@@ -59,9 +60,7 @@ $app->group('/file', function () {
 
     $this->post('/onUploadfile', App\Controllers\UploadController::class .':onUploadfile');
 
-    //$this->get('/showfile', App\Controllers\UploadController::class .':showfile');
     $this->get('/showfile/{file}', App\Controllers\UploadController::class .':showfile');
-    //$this->post('/showfile', App\Controllers\UploadController::class .':showfile');
 
 });
 
